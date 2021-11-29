@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: hsl(185, 41%, 84%);
+  font-family: "Space Mono", monospace;
+  height: 100vh;
+}
+
+.calculator-container {
+  background-color: white;
+  width: 50rem;
+  height: 25rem;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.calculator-inputs {
+  height: 100%;
+  position: relative;
+}
+.calculator-inputs input[type="text"] {
+  background-color: hsl(189, 41%, 97%);
+  padding: 0.5rem 10px;
+  text-align: right;
+  color: hsl(183, 100%, 15%);
+}
+.mb-4 {
+  position: relative;
+}
+.calculator-inputs span {
+  position: absolute;
+  top: 55%;
+  left: 3%;
+  color: hsl(184, 14%, 56%);
+  font-size: 16px;
+}
+.calculator-inputs label {
+  font-size: 16px;
+  color: hsl(183, 100%, 15%);
+  margin-bottom: 5px;
+}
+
+.tip-buttons {
+  display: grid;
+  grid-template-columns: auto auto 35%;
+  justify-items: center;
+}
+.tip-buttons button,
+.custom {
+  background-color: hsl(183, 100%, 15%);
+  color: white;
+  width: 90%;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 0.5rem 10px;
+}
+.tip-buttons button:hover {
+  background-color: hsl(172, 67%, 45%);
+}
+.tip-buttons .custom {
+  color: hsl(184, 14%, 56%);
+  background-color: hsl(189, 41%, 97%);
+  padding: 0;
+}
+
+.calculator-results {
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 20px;
+  padding: 40px;
+  color: white;
+  position: relative;
+}
+.calculator-results .col {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.calculator-results .tip-amount-total {
+  font-size: 3em;
+  font-weight: 700;
+  color: hsl(172, 67%, 45%);
+}
+.calculator-results p {
+  color: hsl(184, 14%, 56%);
+}
+.row {
+  position: relative;
+}
+.calculator-results .reset-btn button {
+  position: absolute;
+  bottom: -100px;
+}
+.calculator-results .reset-btn button {
+  background-color: hsl(172, 67%, 45%);
+  font-weight: 700;
+  font-size: 20px;
+}
+.calculator-results .reset-btn button:hover{
+  background-color: hsl(172, 60%, 42%);
+
+}
+@media (max-width: 768px) {
+  .tip-buttons {
+    grid-template-columns: 50% 50%;
+  }
+  .calculator-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .calculator-results .reset-btn button {
+    position: relative;
+    bottom: 0;
+  }
+
+  .calculator-results .tip-amount-total {
+    font-size: 2.5em;
+  }
+}
